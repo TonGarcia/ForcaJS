@@ -114,6 +114,7 @@ $(function () {
 
             // FOR LIDIA`S VERSION PERFORM "GO TO GAME" WITHOUT ANY BUTTON CLICK (SKIPPING START SCREEN)
             HangmanJS.setup_game();
+            window.HangmanJS = HangmanJS;
         };
 
         /**
@@ -175,8 +176,28 @@ $(function () {
         HangmanJS.bind_close = function () {
             $('.js-to-menu').click(function (e) {
                 e.preventDefault();
-                HangmanJS.to_menu($(this).data('from'));
+                // HangmanJS.to_menu($(this).data('from'));
+                HangmanJS.reload_saving_progress();
             });
+        };
+
+        /**
+         * Rebuild the Hangman screen
+         * saving it progress
+         * (not scoring, but it could be done doing this way)
+         */
+        HangmanJS.reload_saving_progress = function() {
+
+        };
+
+        HangmanJS.remove_right_word = function() {
+            var current_word_i;
+            for(w in HangmanJS.game_words)
+                if(HangmanJS.current_word === HangmanJS.game_words[w].name)
+                    current_word_i = w;
+
+            const once_deletion = 1;
+            HangmanJS.game_words.splice(current_word_i, once_deletion);
         };
 
         /**
@@ -300,6 +321,7 @@ $(function () {
                         $('input').blur();
                         $('#overlay').addClass('show');
                         $('#overlay .modal.success').addClass('show');
+                        HangmanJS.remove_right_word();
                     }
 
                 } else {
@@ -307,6 +329,7 @@ $(function () {
 
                     HangmanJS.add_body_part();
                     HangmanJS.update_score();
+                    HangmanJS.add_new_hint();
 
                     if (HangmanJS.fail_score >= HangmanJS.failed_score) {
                         $('input').blur();
@@ -360,12 +383,26 @@ $(function () {
          * Setup the hints box
          */
         HangmanJS.setup_hints = function () {
-            HangmanJS.hints = $('#hints');
+            HangmanJS.hints_list_element = document.getElementById('hints');
+            HangmanJS.current_hint_item = 0;
+            HangmanJS.hints_itens_elements = [];
 
-            for(h in HangmanJS.current_word.hints) {
-                hint_element = "<li><p>"+ HangmanJS.current_word.hints[h] +"</p></li>";
-                HangmanJS.hints.innerHTML = HangmanJS.hints.innerHTML + hint_element;
-            }
+            for(h in HangmanJS.current_word.hints)
+                HangmanJS.hints_itens_elements.push("<li><p>"+ HangmanJS.current_word.hints[h] +"</p></li>");
+
+            HangmanJS.add_new_hint();
+        };
+
+        /**
+         * Add a new hint to the hints list, based on HangmanJS.current_hint_item
+         */
+        HangmanJS.add_new_hint = function() {
+            var new_hint = HangmanJS.hints_itens_elements[HangmanJS.current_hint_item];
+            if(!new_hint) return;
+
+            HangmanJS.new_hint = new_hint;
+            HangmanJS.hints_list_element.innerHTML = HangmanJS.new_hint + HangmanJS.hints_list_element.innerHTML;
+            HangmanJS.current_hint_item++;
         };
 
         /**
