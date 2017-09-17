@@ -5,6 +5,7 @@
 	<title>ForcaJS</title>
 
 	<link rel="stylesheet" href="css/screen.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 
 	<script src="js/jquery.js"></script>
 	<script src="js/hangman.js"></script>
@@ -46,7 +47,7 @@
 	<div class="game-section game" id="game-stage">
 		<div class="site-container">
 			<div class="menu-bar">
-				<a href="#" class="js-to-menu link" data-from="game">Back</a>
+				<!--<a href="#" class="js-to-menu link" data-from="game">Back</a>-->
 				<a href="#" class="js-to-menu logo" data-from="game">
 					<img src="img/logo.png">
 				</a>
@@ -54,22 +55,22 @@
 			<div class="game-content">
 				<div class="left-game-col">
 					<div class="word-info">
-						<h2>Guess the word!</h2>
+						<h2>Advinhe a palavra!</h2>
 						<ul class="word-characters"></ul>
 						<div class="clear"></div>
 						<div class="enter-char">
-							<h3>Enter a character</h3>
-							<input type="text" id="enter-char-input" class="input" placeholder="Guess a Character" maxlength="1">
+							<h3>Escolha uma Letra</h3>
+							<input type="text" id="enter-char-input" class="input" placeholder="Escreva uma letra aqui" maxlength="1">
 						</div>
 					</div>
 					<div class="game-information">
-						<h2>Game Information</h2>
-						<ul>
+						<h2>Dicas da Palavra</h2>
+						<ul id="hints">
 							<li>
-								<p>The word is <span class="word-length bold">0</span> characters long.</p>
+								<p>A palavra possui <span class="word-length bold">0</span> letras.</p>
 							</li>
 							<li>
-								<p>You have <span class="attempts-left bold">8</span> attempts left.</p>
+								<p>Te restam <span class="attempts-left bold">8</span> tentativas.</p>
 							</li>
 						</ul>
 					</div>
@@ -79,21 +80,21 @@
 				</div>
 				<div class="clear"></div>
 				<div class="used-words">
-					<h2>Guessed letters</h2>
+					<h2>Letras já usadas</h2>
 					<ul class="alphabet" id="alphabet">
 					</ul>
 				</div>
 			</div>
 			<div class="overlay" id="overlay">
 				<div class="modal failed">
-					<h2>You've died!</h2>
-					<p>Well done there, you've managed to get yourself hanged.</p>
-					<a href="#" class="right js-to-menu" data-from="game">Home</a>
+					<h2>Você perdeu!</h2>
+					<p>Colega, infelizmente você precisa conhecer melhor os coleguinhas...</p>
+					<a href="#" id="wrong-alert" class="right js-to-menu" data-from="game"> <i class="fa fa-frown-o"></i> okay...</a>
 				</div>
 				<div class="modal success">
-					<h2>You survived!</h2>
-					<p>Well done there, you've manage to stay alive! Go ahead and play again!</p>
-					<a href="#" class="right js-to-menu" data-from="game">Home</a>
+					<h2>Você sobreviveu!</h2>
+					<p>Muito bem colega, você realmente conhece este coleguinha, vamos ver se você conhece o próximo?</p>
+					<a href="#" class="right js-to-menu" data-from="game">Próximo</a>
 				</div>
 			</div>
 		</div>

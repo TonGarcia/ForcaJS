@@ -1,3 +1,5 @@
+window.bd = null;
+
 $(function () {
 
     /**
@@ -8,8 +10,8 @@ $(function () {
      * @todo: Consider moving words to private place
      *
      */
-
-    var HangmanJS = function () {
+    var HangmanJS;
+    HangmanJS = function () {
 
         /**
          * Make sure that we're a constructor and not a function call
@@ -152,6 +154,7 @@ $(function () {
             HangmanJS.setup_characters();
             HangmanJS.setup_info();
 
+            HangmanJS.setup_hints();
             HangmanJS.setup_canvas();
 
             HangmanJS.bind_enter_character();
@@ -182,28 +185,57 @@ $(function () {
         HangmanJS.to_menu = function (from) {
             $('.game-section.' + from).removeClass('show');
 
-            if (from == 'game') {
+            if (from === 'game') {
                 HangmanJS.revert_game();
             }
         };
 
         /**
-         * Pick a random word
+         * Retrieve Professionals from BD JSON
+         * it is not an async ajax, so the JS wait it complete to continue
+         */
+        HangmanJS.setup_from_json_bd = function () {
+            // OBS: no need to save on localStorage, it game doesn't refresh it page
+            if(window.bd) return;
+
+            $.ajax({
+                url: "/bd/adolescentro-profissionais.json",
+                type: 'GET',
+                async: false,
+                cache: false,
+                timeout: 3000,
+                error: function(e){
+                    console.log(e);
+                    alert('Ooops! Something went wrong...');
+
+                    return true;
+                },
+                success: function(resp) {
+                    window.bd = resp;
+                }
+            });
+        };
+
+        /**
+         * Pick a random word/professional
          */
         HangmanJS.pick_word = function () {
             var chars;
             var uppercase_chars = [];
+            HangmanJS.setup_from_json_bd();
+            HangmanJS.game_words = JSON.parse(window.bd);
             var item = HangmanJS.game_words[Math.floor(Math.random() * HangmanJS.game_words.length)];
 
-            chars = item.split('');
-
+            console.log(item);
+            chars = item.name.split('');
             for (var i = 0; i < chars.length; i++) {
                 uppercase_chars.push(chars[i].toUpperCase());
             }
 
             return {
-                word: item,
-                length: item.length,
+                word: item.name,
+                length: item.name.replace(' ', '').length,
+                hints: item.hints,
                 chars: uppercase_chars
             };
         };
@@ -228,10 +260,10 @@ $(function () {
             var input = $('#enter-char-input');
 
             input.keypress(function (e) {
-                if (e.which == 13) {
+                if (e.which === 13) {
                     var c = input.val();
 
-                    if (c != '' && c.match(/^[a-zA-Z]+$/)) {
+                    if (c !== '' && c.match(/^[a-zA-Z]+$/)) {
                         HangmanJS.input_char(c);
                     }
 
@@ -246,7 +278,7 @@ $(function () {
         HangmanJS.input_char = function (character) {
             character = character.toUpperCase();
 
-            if ($.inArray(character, HangmanJS.used_characters) == -1) {
+            if ($.inArray(character, HangmanJS.used_characters) === -1) {
                 HangmanJS.used_characters.push(character);
 
                 $('#alphabet li[data-char=' + character + ']').addClass('used');
@@ -257,7 +289,7 @@ $(function () {
 
                     for (var i = 0; i < HangmanJS.current_word.chars.length; i++) {
 
-                        if (HangmanJS.current_word.chars[i] == character) {
+                        if (HangmanJS.current_word.chars[i] === character) {
                             HangmanJS.correctly_guessed++;
                             $('.word-characters li[data-id="' + i + '"]').html(character);
                         }
@@ -322,6 +354,18 @@ $(function () {
             HangmanJS.character = HangmanJS.character[0];
 
             HangmanJS.character_ctx = HangmanJS.character.getContext('2d');
+        };
+
+        /**
+         * Setup the hints box
+         */
+        HangmanJS.setup_hints = function () {
+            HangmanJS.hints = $('#hints');
+
+            for(h in HangmanJS.current_word.hints) {
+                hint_element = "<li><p>"+ HangmanJS.current_word.hints[h] +"</p></li>";
+                HangmanJS.hints.innerHTML = HangmanJS.hints.innerHTML + hint_element;
+            }
         };
 
         /**

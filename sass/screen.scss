@@ -55,6 +55,12 @@ li {
   }
 }
 
+#wrong-alert {
+  i.fa {
+    font-size: 1.4em !important;
+  }
+}
+
 .game-section {
   width: 100%;
   height: 100%;
@@ -67,7 +73,7 @@ li {
 
   &.game {
     right: -100%;
-    background: #FF9A65;
+    background: #4DB6AC;
 
     &.show {
       right: 0;
@@ -328,7 +334,7 @@ li {
 
   .modal {
     width: 350px;
-    height: 150px;
+    height: 160px;
     padding: 15px;
     display: none;
     margin-top: 275px;
@@ -343,6 +349,7 @@ li {
 
       a {
         background: #c44343;
+        margin-top: -7px;
 
         &:hover {
           background: darken(#c44343, 5);
@@ -352,9 +359,11 @@ li {
 
     &.success {
       background: #66b53f;
+      height: 175px;
 
       a {
         background: rgba(0, 0, 0, .2);
+        margin-top: -7px;
 
         &:hover {
           background: rgba(0, 0, 0, .3);
