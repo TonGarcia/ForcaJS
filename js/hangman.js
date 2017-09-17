@@ -1,5 +1,15 @@
 window.bd = null;
 
+function blink(element) {
+    element.removeClass('new');
+    setTimeout(function() {
+        element.addClass('new');
+        setTimeout(function() {
+            element.removeClass('new');
+        }, 1000);
+    }, 1);
+}
+
 $(function () {
 
     /**
@@ -388,7 +398,7 @@ $(function () {
             HangmanJS.hints_itens_elements = [];
 
             for(h in HangmanJS.current_word.hints)
-                HangmanJS.hints_itens_elements.push("<li><p>"+ HangmanJS.current_word.hints[h] +"</p></li>");
+                HangmanJS.hints_itens_elements.push("<li><p id='hint_"+h+"'>"+ HangmanJS.current_word.hints[h] +"</p></li>");
 
             HangmanJS.add_new_hint();
         };
@@ -402,6 +412,8 @@ $(function () {
 
             HangmanJS.new_hint = new_hint;
             HangmanJS.hints_list_element.innerHTML = HangmanJS.new_hint + HangmanJS.hints_list_element.innerHTML;
+            blink($('#hint_'+HangmanJS.current_hint_item));
+
             HangmanJS.current_hint_item++;
         };
 
