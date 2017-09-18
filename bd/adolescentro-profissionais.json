@@ -18,7 +18,7 @@
     ]
   },
   {
-"name": "Marines",
+    "name": "Marines",
     "hints": [
       "Atende 6 por período",
       "Psiquiatra",
@@ -26,7 +26,7 @@
       "Necessário passar pelo Pediatra ou Hebiatra antes",
       "Participa do Grupo Interação",
       "tende Esquizofrênicos, psicóticos"
-      ]
+    ]
   },
   {
     "name": "Cleine",
@@ -46,117 +46,120 @@
       "Profissional de 20 horas",
       "Agendado diretamente ou após supervisão de equipe",
       "Atende pacientes com transtorno mental acompanhados no PAVs"
-      ]
-   },
-  {  
- "name": "Pollyanna",
+    ]
+  },
+  {
+    "name": "Pollyanna",
     "hints": [
       "Enfermeira",
       "Profissional de 40h",
-      "Participa do grupo de entrada"
+      "Participa do grupo de entrada",
       "Adolescentes gestantes",
       "Não necessáriamente passar por outro profissional antes"
     ]
   },
-  {  
- "name": "Cassia",
+  {
+    "name": "Cassia",
     "hints": [
       "Assistente social",
       "Profissional de 40h",
-      "Adolescentes acompanhados no PAV e no grupo Aprendendo a Viver"
+      "Adolescentes acompanhados no PAV e no grupo Aprendendo a Viver",
       "Atende 3 ou 4",
       "Antes da marcação, precisa passar pelo grupo"
     ]
   },
-  {  
- "name": "Bethania",
+  {
+    "name": "Bethania",
     "hints": [
-      "Psicologa",
+      "Psicóloga",
       "Profissional de 40h",
-      "Participa do grupo de entrada"
+      "Participa do grupo de entrada",
       "Atende adolescentes que precisam de avaliação do SNC",
-      "Precisa passar pelo BIO antes"
-      Ätende 3 por turno"
+      "Precisa passar pelo BIO antes",
+      "Atende 3 por turno"
     ]
   },
-  {  
- "name": "Stella",
+  {
+    "name": "Stella",
     "hints": [
       "Assistente social",
       "Profissional de 20h",
-      "Atende de 3 a 4 por turno"
+      "Atende de 3 a 4 por turno",
       "Trabalha com inclusão de estágios, jovem aprendiz, adolescentes fora da escola, benefícios sociais",
       "Não necessáriamente passar por outro profissional antes"
     ]
   },
-  {  
- "name": "Fabiola Leao",
+  {
+    "name": "Fabiola Leao",
     "hints": [
-      "Atende 6 por período"
+      "Atende 6 por período",
       "Pacientes com retardo mental, depressão, ansiedade, TOC, espectros bipolares e psicoses, TOD, Transtorno de Conduta",
-      "Não necessáriamente passar por outro profissional antes"
-      "Psiquiatra"     
+      "Não necessáriamente passar por outro profissional antes",
+      "Psiquiatra"
     ]
   },
-  {  
- "name": "Silvana",
+  {
+    "name": "Silvana",
     "hints": [
-      "Necessário passar pelo médico, clínicos gerais"
+      "Necessário passar pelo médico, clínicos gerais",
       "2 de primeira vez, 6 retornos, alguns extras. 10 a 12 por período",
       "Profissional de 20h",
-      "Doença neurológica, necessidade de investigação nesta área"
-      "Neuropediatra",
+      "Doença neurológica, necessidade de investigação nesta área",
+      "Neuropediatra"
     ]
   },
-  {  
- "name": "Caroline",
+  {
+    "name": "Caroline",
     "hints": [
-      "EPsicologa",
+      "Psicóloga",
       "Profissional de 40h",
-      "Atende 6 por período"
+      "Atende 6 por período",
       "Pacientes com dificuldades emocionais, comportamentais e de aprendizagem",
       "Não necessáriamente passar por outro profissional antes"
     ]
   },
-  {  
- "name": "Dacia",
+  {
+    "name": "Dacia",
     "hints": [
-      ""Profissional de 20h",
+      "Profissional de 20h",
       "Atende adolescentes e as famílias que moram na mesma casa",
-      "Paciente precisa estar vinculado ao Adolescentro previamente"
+      "Paciente precisa estar vinculado ao Adolescentro previamente",
       "THD",
       "Atende mais ou menos 20 por turno"
     ]
   },
-  {  
- "name": "Márcia Cristina",
+  {
+    "name": "Márcia Cristina",
     "hints": [
       "Atende 5 por período, mas depende da demanda",
       "Não há um perfil",
-      "Não necessáriamente passar por outro profissional antes"
+      "Não necessáriamente passar por outro profissional antes",
       "Odontologia"
     ]
   },
-  {  
- "name": "Benhur",
+  {
+    "name": "Benhur",
     "hints": [
       "Não há um perfil",
       "Profissional de 40h",
-      "Atende de 8 a 10 por período"
+      "Atende de 8 a 10 por período",
       "Atende adolescentes e responsáveis inseridos no serviço",
       "Odontologia"
     ]
   },
-  {  
- "name": "Gersilene",
+  {
+    "name": "Gersilene",
     "hints": [
       "Atende individual e grupo",
       "Profissional de 40h",
-      "Necessáriamente passar por outro profissional antes"
-      "Atende 4 por turno"
-      "Participa do grupo de entrada"
+      "Necessáriamente passar por outro profissional antes",
+      "Atende 4 por turno",
+      "Participa do grupo de entrada",
       "Participa do grupo  Interação",
       "Participa do grupo TDAH",
       "Participa do grupo CRIAR",
       "Trabalha realações familiares",
       "Enfermeira"
+    ]
+  }
+]
