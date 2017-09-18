@@ -59,113 +59,104 @@
     ]
   },
   {  
- "name": "Pollyanna",
+ "name": "Cassia",
     "hints": [
-      "Enfermeira",
+      "Assistente social",
+      "Profissional de 40h",
+      "Adolescentes acompanhados no PAV e no grupo Aprendendo a Viver"
+      "Atende 3 ou 4",
+      "Antes da marcação, precisa passar pelo grupo"
+    ]
+  },
+  {  
+ "name": "Bethania",
+    "hints": [
+      "Psicologa",
       "Profissional de 40h",
       "Participa do grupo de entrada"
-      "Adolescentes gestantes",
+      "Atende adolescentes que precisam de avaliação do SNC",
+      "Precisa passar pelo BIO antes"
+      Ätende 3 por turno"
+    ]
+  },
+  {  
+ "name": "Stella",
+    "hints": [
+      "Assistente social",
+      "Profissional de 20h",
+      "Atende de 3 a 4 por turno"
+      "Trabalha com inclusão de estágios, jovem aprendiz, adolescentes fora da escola, benefícios sociais",
       "Não necessáriamente passar por outro profissional antes"
     ]
   },
   {  
- "name": "Pollyanna",
+ "name": "Fabiola Leao",
     "hints": [
-      "Enfermeira",
+      "Atende 6 por período"
+      "Pacientes com retardo mental, depressão, ansiedade, TOC, espectros bipolares e psicoses, TOD, Transtorno de Conduta",
+      "Não necessáriamente passar por outro profissional antes"
+      "Psiquiatra"     
+    ]
+  },
+  {  
+ "name": "Silvana",
+    "hints": [
+      "Necessário passar pelo médico, clínicos gerais"
+      "2 de primeira vez, 6 retornos, alguns extras. 10 a 12 por período",
+      "Profissional de 20h",
+      "Doença neurológica, necessidade de investigação nesta área"
+      "Neuropediatra",
+    ]
+  },
+  {  
+ "name": "Caroline",
+    "hints": [
+      "EPsicologa",
       "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
+      "Atende 6 por período"
+      "Pacientes com dificuldades emocionais, comportamentais e de aprendizagem",
       "Não necessáriamente passar por outro profissional antes"
     ]
   },
   {  
- "name": "Pollyanna",
+ "name": "Dacia",
     "hints": [
-      "Enfermeira",
-      "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
+      ""Profissional de 20h",
+      "Atende adolescentes e as famílias que moram na mesma casa",
+      "Paciente precisa estar vinculado ao Adolescentro previamente"
+      "THD",
+      "Atende mais ou menos 20 por turno"
     ]
   },
   {  
- "name": "Pollyanna",
+ "name": "Márcia Cristina",
     "hints": [
-      "Enfermeira",
-      "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
+      "Atende 5 por período, mas depende da demanda",
+      "Não há um perfil",
       "Não necessáriamente passar por outro profissional antes"
+      "Odontologia"
     ]
   },
   {  
- "name": "Pollyanna",
+ "name": "Benhur",
     "hints": [
-      "Enfermeira",
+      "Não há um perfil",
       "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
+      "Atende de 8 a 10 por período"
+      "Atende adolescentes e responsáveis inseridos no serviço",
+      "Odontologia"
     ]
   },
   {  
- "name": "Pollyanna",
+ "name": "Gersilene",
     "hints": [
-      "Enfermeira",
+      "Atende individual e grupo",
       "Profissional de 40h",
+      "Necessáriamente passar por outro profissional antes"
+      "Atende 4 por turno"
       "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
-    ]
-  },
-  {  
- "name": "Pollyanna",
-    "hints": [
-      "Enfermeira",
-      "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
-    ]
-  },
-  {  
- "name": "Pollyanna",
-    "hints": [
-      "Enfermeira",
-      "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
-    ]
-  },
-  {  
- "name": "Pollyanna",
-    "hints": [
-      "Enfermeira",
-      "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
-    ]
-  },
-  {  
- "name": "Pollyanna",
-    "hints": [
-      "Enfermeira",
-      "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
-    ]
-  },
-  {  
- "name": "Pollyanna",
-    "hints": [
-      "Enfermeira",
-      "Profissional de 40h",
-      "Participa do grupo de entrada"
-      "Adolescentes gestantes",
-      "Não necessáriamente passar por outro profissional antes"
-    ]
-  }
-]     
+      "Participa do grupo  Interação",
+      "Participa do grupo TDAH",
+      "Participa do grupo CRIAR",
+      "Trabalha realações familiares",
+      "Enfermeira"
