@@ -254,7 +254,7 @@ $(function () {
             var chars;
             var uppercase_chars = [];
             HangmanJS.setup_from_json_bd();
-            HangmanJS.game_words = JSON.parse(window.bd);
+            HangmanJS.game_words = window.bd;
             var item = HangmanJS.game_words[Math.floor(Math.random() * HangmanJS.game_words.length)];
 
             console.log(item);
