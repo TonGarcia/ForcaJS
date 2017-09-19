@@ -230,7 +230,7 @@ $(function () {
             if(window.bd) return;
 
             $.ajax({
-                url: "/bd/adolescentro-profissionais.json",
+                url: "bd/adolescentro-profissionais.json",
                 type: 'GET',
                 async: false,
                 cache: false,
